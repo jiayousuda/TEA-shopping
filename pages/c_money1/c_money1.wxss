@@ -1,0 +1,191 @@
+
+.recommend{
+  height: 110px;
+}
+image {
+width:320px;
+height:110px;
+display:inline-block;
+overflow:hidden;
+}
+.tit{
+  padding: 14px 10px;
+  font-size: 14px; 
+}
+.htit{
+}
+.tainer{
+  position: absolute;
+  width: 100%;
+}
+.con{
+width:96%;
+/* margin-left:2%; */
+background-color:#fff;
+height: 40px;
+ padding: 0 10px 
+}
+.money{
+  padding: 14px 22px;
+  border-bottom: 1px dotted #D1D1D1; 
+  font-size: 14px;
+}
+.footer{
+  position: relative;
+  height:40px;
+}
+.footer :nth-child(1){
+    background-color:  #353E3B;
+  color: #fff;
+  position:absolute;
+  top: 5px;
+  right: 11px;
+ height:30px;
+line-height:30px;
+font-size: 14px;
+}
+
+/*遮罩层 end  */
+/*优惠券  star*/
+.full-cut .coupon .coupon-img{
+  width: 98%;
+  margin-left: 1%;
+  height: 90px;
+  margin-top: 10px;
+}
+.full-cut .coupon .coupon-con{
+  width: 90%;
+  margin-left: 5%;
+  height: 110px;
+  margin-top: -120px;
+  position: relative;
+  z-index: 5;
+  margin-bottom:12px;
+}
+.coupon-con .name{
+ margin-top: 32px;
+ margin-left:15px;
+  z-index: 10;
+  left:70rpx;
+  font-size: 15px;
+  width: 50%;
+  color:#333333;
+  display: inline-block;
+}
+.coupon .full{
+ z-index: 10;
+ margin-left:15px;
+  font-size: 11px;
+  color:#333333;
+}
+.coupon .time{
+  z-index: 10;
+  left:70rpx;
+  margin-top:15px;
+  margin-left: 15px;
+  font-size: 11px;
+  color:#b0b0b0;
+  display: inline-block;
+}
+
+.coupon .cut{
+  margin-top: -32px;
+  position: absolute;
+  right: 15px;
+  color:#ff0000;
+  font-size:60rpx;
+  z-index: 10;
+}
+.coupon .cut .yuan{
+  color:#ff0000;
+  font-size: 13px;
+} 
+.coupon .line{
+  width:96%;
+  position: relative;
+  top:6px;
+  margin-left: 2%;
+  border-top:1px solid #E0E0E0;
+}
+.coupon .receive{
+  width:53px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 13px;
+  background: #ff0000;
+  border-radius:20px;
+  position:absolute;
+  top:84px;
+  right:2%;
+  text-align:center;
+  padding:2px 3px;
+}
+/*优惠券 end  */
+.weui-cell_input {
+padding-top:1px;
+padding-bottom:1px;
+}
+
+.con{
+  display: flex;
+  text-align:left;
+
+}
+.weui-cell_input{
+  flex: 2;
+   text-align:left;
+}
+.footer{
+  flex: 1;
+}
+
+
+
+.his_tit{
+  height:40px;
+line-height:40px;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  background: #f5f5f5;
+}
+.tit_left{
+position: absolute;
+left:10px;
+}
+.tit_right{
+position: absolute;
+right:10px;
+}
+
+
+.his_li{
+  display: flex;
+  padding: 5px 10px;
+  border-bottom: 1px solid #f5f5f5;
+  line-height: 23px;
+}
+.li_left{
+  flex: 1;
+  text-align: left;
+}
+.li_right{
+  flex: 1;
+  text-align: right;
+}
+.his_money{
+  font-size: 14px;
+  color: #333;
+}
+.chongzhi,.his_resule,.his_time{
+  font-size: 12px;
+  color: #666;
+}
+.nomore{
+  font-size:14px;
+  background:#f1f1f1;
+  color:#999;
+  line-height:25px;
+  text-align:center;
+  margin-top: -10px;
+}

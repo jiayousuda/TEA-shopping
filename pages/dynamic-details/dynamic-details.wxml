@@ -1,0 +1,43 @@
+<scroll-view scroll-y="true" style="height:{{height}}px;" bindscrolltolower="scrollBottom">
+<view class="container">
+  <!--轮播图 star  -->
+  <view class="recommend">
+    <view class="swiper-container">
+      <swiper style="{{width}}" autoplay="true" interval="5000" class="swiper">
+        <block wx:for="{{movies}}" wx:key="unique">
+          <swiper-item>
+            <image class="swiperimg" src="{{item.image_url}}">11</image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!--轮播图 end  -->
+  <view class="tain-top public_color">
+    <text class="background_color"></text> <text class="text1 background_color"></text>最新活动<text class="text1 background_color"></text>
+    <text class="background_color"></text>
+  </view>
+  <view class="list">
+
+   
+    <view class="new-list" bindtap='news' wx:for="{{info}}" data-id="{{item.id}}">
+      <view class="new-left">
+        <view>{{item.day}}</view>
+        <view>{{item.month}}</view>
+      </view>
+      <view class="new-right">
+        <view>{{item.title}}</view>
+        <!-- <view>{{item.description}}</view> -->
+      </view>
+    </view>
+  </view>
+
+<view  class='nomore' hidden='{{nomore}}'>
+  没有更多啦~
+  </view>
+
+   <!--footer star  -->
+  <!-- <view class="footer">众之鑫科技提供技术支持@zzxkeji.cn</view> -->
+  <!--footer end  -->
+</view>
+</scroll-view>

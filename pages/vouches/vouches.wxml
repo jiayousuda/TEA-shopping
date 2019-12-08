@@ -1,0 +1,24 @@
+<view class="partic" bindtap="partic">不使用优惠券</view>
+<view class="couponsList">
+  <view class="couList" wx:for="{{coupons}}" >
+    <view class="contant" >
+      <image src='../../images/coupon.png'>
+      </image>
+      <view class="list_con">
+        <view class="cou_name">
+          <view class="cou_name_nth1">
+          <view>{{item.coupon_name}}</view>
+            
+            <view class="but" data-couid="{{item.id}}" data-coumoney="{{item.fee}}" bindtap='usecoupon'>立即使用</view>
+            <view class="cou_time">(使用时间：{{item.start_time}}-{{item.end_time}})</view>
+          </view>
+          <view class="con-money">
+            <text class="cou_mon"> ￥ </text>
+            <text class="cou_name_nth2">{{item.fee}}</text>
+            <view class="manjian">满{{item.condition}}元可用</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

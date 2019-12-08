@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 474501 */
+  src: url('//at.alicdn.com/t/font_474501_glfqo46h8rc6jemi.eot');
+  src: url('//at.alicdn.com/t/font_474501_glfqo46h8rc6jemi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_474501_glfqo46h8rc6jemi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_474501_glfqo46h8rc6jemi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_474501_glfqo46h8rc6jemi.svg#iconfont') format('svg');
+}
+page{
+  background: #fff;
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-0017:before { content: "\e660"; }
+
+.icon-dingdan:before { content: "\e618"; color:#e55949;
+  padding: 0 10px;
+  position: relative;
+  top: -2px;}
+
+.icon-yiwancheng:before { content: "\e632"; }
+
+.icon-youhuiquan-01:before { content: "\e60f"; color:#e55949;
+  padding: 0 10px;
+  position: relative;
+  top: -2px;}
+
+.icon-wodeyouhuiquan:before { content: "\e651"; color:#e55949;
+  padding: 0 10px;
+  position: relative;
+  top: -2px;}
+
+.icon-wode_youhuiquan:before { content: "\e647"; }
+
+.icon-dizhi:before { content: "\e614"; color:#e55949;
+  padding: 0 10px;
+  position: relative;
+  top: -2px;}
+
+.icon-wodeyouhuiquan1:before { content: "\e81d"; }
+
+.icon-daizhifu:before { content: "\e603"; }
+
+.icon-shouhuoyihuifu:before { content: "\e602"; }
+
+
+.img{
+  text-align: center;
+}
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+  position:relative;
+bottom:25px;
+
+}
+.userinfo {
+	display: flex;
+	flex-direction: column;
+	padding: 35rpx 0;
+	align-items: center;
+	 background: #B28232; 
+  width: 750rpx;
+}
+ .my-item navigator text{
+  margin-left: 22rpx;
+} 
+.userinfo-avatar {
+	width: 160rpx;
+	height: 160rpx;
+	margin: 20rpx;
+	border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-top: 20rpx;
+  color: #FFF;
+}
+
+
+.version {
+  width:100%;
+  height: 40rpx;
+	line-height: 40rpx;
+	font-size: 24rpx;
+	text-align: center;  
+  padding: 40rpx;
+}
+
+.my-item{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    border-bottom: 1px solid #eee;
+    height: 80rpx;
+    line-height: 80rpx;
+    /* margin-left: 22rpx; */
+    font-size: 13px;
+    color: #333;
+}
+
+.about{
+    width: 100%;
+    background: url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 750rpx center;
+    background-size: 16rpx auto,750rpx auto;
+    margin: 20rpx 0; 
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 100rpx;
+}
+.login{
+  margin-top:30px;
+  font-size: 13px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 30px;
+}
+#phone{
+  margin-top:30px;
+  font-size: 13px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  color: #000;
+  border:none;
+  text-align: left;
+  padding:1.9% 7%;
+}
+ .orderInfo{padding-top: 21rpx;padding-bottom: 2rpx;margin-top: 1px;} 
+.orderInfo{
+  border-bottom: 1px solid #ddd;
+}
+.orderInfo>view{display: inline-block;width: 25%;text-align: center;}
+.orders-status {margin-top:10rpx;font-size: 24rpx;}
+.orderInfo image{width: 44rpx;height: 38rpx;}
+.orderInfo .notice{position: relative;top: -16rpx;right: -65rpx;height: 32rpx;width: 32rpx;border-radius: 50%;border:1px solid #fe0000;color: #fe0000;display: inline-block;line-height: 32rpx;background-color: #fff;}
+.orderInfo .notice-1{position: relative;top: -16rpx;right: -74rpx;border:1px solid #fe0000;color: #fe0000;display: inline-block;height:32rpx;line-height: 32rpx;background-color: #fff;text-align: center;border-radius:20rpx;padding:0 12rpx;/*width: 50rpx;*/}
+
+ /*footer star  */
+ .footer1 {
+  font-size: 12px;
+  color: #999;
+position: fixed;
+bottom: 0;
+text-align: center;
+width: 100%;
+
+  } 
+/*footer end  */

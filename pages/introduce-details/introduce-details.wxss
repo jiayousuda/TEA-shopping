@@ -1,0 +1,82 @@
+.con-top image{
+  height: 180px;
+  width: 100%;
+}
+.titlee{
+  width: 92%;
+  margin:0 auto;
+}
+.tit1{
+  padding :5px 0;
+}
+.tit1 :nth-child(1){
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #666;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.tit1 :nth-child(2){
+    font-size: 12px;
+    color: #666;
+}
+/*title star  */
+.tain-top{
+  text-align: center;
+  padding:15px  0;
+  font-size: 17px;
+  font-weight: bold;
+}
+.tain-top text{
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  position: relative;
+  top: -5px;
+  margin: 0 6px;
+}
+.tain-top .text1{
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+ 
+  position: relative;
+  top: -3px;
+  margin: 0 6px;
+}
+/*title end  */
+.imm{
+  display: flex;
+}
+.imm image{
+  flex: 1;
+  height: 110px;
+  padding:6px;
+}
+.tainer{
+  width: 92%;
+  margin: 0 auto;
+  color: #333;
+  font-size: 14px;
+  /* margin-bottom: 20px; */
+  line-height: 25px;
+  /* margin-top: 10px; */
+}
+.WxEmojiView{
+  text-indent: 2em;
+  font-size: 13px;
+}
+
+/*footer star  */
+.footer{
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+/*footer end  */

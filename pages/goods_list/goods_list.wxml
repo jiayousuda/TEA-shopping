@@ -1,0 +1,25 @@
+<view>
+  <view class="nav">
+    <view class="nav-li {{order=='sell'?'active':''}}" bindtap='currrnav' data-order="sell" data-order_type="{{pd1?'asc':'desc'}}">销量</view>
+    <view class="nav-li {{order=='price'?'active':''}}" bindtap='currrnav' data-order="price" data-order_type="{{pd2?'asc':'desc'}}">价格</view>
+    <view class="nav-li {{order=='time'?'active':''}}" bindtap='currrnav' data-order="time" data-order_type="{{pd3?'desc':'asc'}}">时间</view>
+  </view>
+  <scroll-view scroll-y="true" style="height:{{height}}px;" bindscrolltolower="scrollBottom">
+    <view class="con-right-class" wx:for="{{goods_list}}" bindtap="toDetailsTap" data-id="{{item.id}}">
+      <view class="ific_img">
+        <image src='../../images/phone.jpg' class="image"></image>
+      </view>
+      <view class="ific_font">
+        <view>{{item.goods_name}}</view>
+        <view class="goods_money font_color">￥{{item.sell_price}}
+          <text>￥{{item.cost_price}}</text>
+        </view>
+        <view class="sale">销量{{item.sell_total_num}}</view>
+      </view>
+    </view>
+    <view hidden='{{nomore}}' class='nomore'>
+      没有更多啦~
+    </view>
+  </scroll-view>
+
+</view>

@@ -1,0 +1,90 @@
+<view class="container">
+  <view class="userinfo background_color">
+    <image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+  </view>
+  <view class="orderInfo bg-fff text-center">
+    <view class="order_li1" bindtap="showOrder" data-index="0">
+      <view>
+        <block wx:if="{{data.unpay>=10}}">
+          <text class="notice-1">{{data.unpay}}</text>
+        </block>
+        <block wx:else>
+          <text wx:if="{{data.unpay>0}}" class="notice">{{data.unpay}}</text>
+        </block>
+        <view class="img">
+          <text class="iconfont icon-wode_youhuiquan">{{wode_youhuiquan}}</text>
+        </view>
+      </view>
+      <view class="orders-status">待付款</view>
+    </view>
+    <view class="order_li2" bindtap="showOrder" data-index="1">
+      <view>
+        <block wx:if="{{data.ungroup>=10}}">
+          <text class="notice-1">{{data.ungroup}}</text>
+        </block>
+        <block wx:else>
+          <text wx:if="{{data.ungroup>0}}" class="notice">{{data.ungroup}}</text>
+        </block>
+        <view class="img">
+          <text class="iconfont icon-yiwancheng">{{yiwancheng}}</text>
+        </view>
+      </view>
+      <view class="orders-status">待发货</view>
+    </view>
+    <view class="order_li3" bindtap="showOrder" data-index="2">
+      <view>
+        <block wx:if="{{data.unsend>=10}}">
+          <text class="notice-1">{{data.unsend}}</text>
+        </block>
+        <block wx:else>
+          <text wx:if="{{data.unsend>0}}" class="notice">{{data.unsend}}</text>
+        </block>
+        <view class="img">
+          <text class="iconfont icon-daizhifu">{{daizhifu}}</text>
+        </view>
+      </view>
+      <view class="orders-status">待收货</view>
+    </view>
+    <view class="order_li4" bindtap="showOrder" data-index="3">
+      <view>
+        <block wx:if="{{data.unreceipt>=10}}">
+          <text class="notice-1">{{data.unreceipt}}</text>
+        </block>
+        <block wx:else>
+          <text wx:if="{{data.unreceipt>0}}" class="notice">{{data.unreceipt}}</text>
+        </block>
+        <view class="img">
+          <text class="iconfont icon-shouhuoyihuifu">{{shouhuoyihuifu}}</text>
+        </view>
+      </view>
+      <view class="orders-status">已完成</view>
+    </view>
+  </view>
+
+  <view class="my-item">
+    <navigator url="/pages/select-address/index" hover-class="navigator-hover">
+    <text> 地址管理</text>
+   
+    </navigator>
+  </view>
+  <view class="my-item bornone">
+    <navigator url="/pages/mycoupons/index" hover-class="navigator-hover"><text>优惠券</text></navigator>
+  </view>
+  <view class="my-item bornone">
+    <navigator url="/pages/shop-cart/index" hover-class="navigator-hover"><text>购物车</text></navigator>
+  </view>
+  <view class="my-item bornone">
+    <navigator url="/pages/inte_list/inte_list" hover-class="navigator-hover"><text>积分订单</text></navigator>
+  </view>
+ 
+  <view class="my-item bornone">
+    <navigator url="/pages/integral/integral" hover-class="navigator-hover"><text>积分明细</text></navigator>
+  </view>
+   <view class="my-item bornone">
+    <navigator url="/pages/ymoney/ymoney" hover-class="navigator-hover"><text>我的余额</text></navigator>
+  </view>
+</view>
+ <!--footer star  -->
+    <view class="footer1" bindtap='phone1'>众之鑫科技提供技术支持@zzxkeji.cn</view>
+    <!--footer end  -->

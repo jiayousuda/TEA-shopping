@@ -1,0 +1,376 @@
+@import "../template/pwdInput.wxss";
+page{
+  background: #fff;
+}
+/* 更多尖括号 */
+.arrowUp:after {
+
+content:'';
+
+border-top:1px solid #999;
+
+border-right:1px solid #999;
+
+transform:rotate(45deg);
+
+-webkit-transform:rotate(45deg);
+
+position:absolute;
+
+top:40rpx;
+
+right:20px;
+
+
+}
+
+.recommend{
+  height: 110px;
+}
+image {
+width:320px;
+height:110px;
+display:inline-block;
+overflow:hidden;
+}
+.tit{
+   margin:0 15px;  
+font-size:14px;
+background:#fff;
+display:flex;
+border-bottom:1px solid #f5f5f5;
+height:40px;
+line-height:40px;
+}
+
+.shohome{
+   /* width: 85px;   */
+  overflow: hidden;
+}
+.homename{  
+ display: inline-block;
+} 
+.htit{
+  /* margin-left: 15px; */
+  font-size: 14px;
+}
+.tainer{
+  /* position: absolute; */
+  width: 100%;
+}
+.con{
+
+background-color:#fff;
+}
+.weui-cell{
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.youhui {
+  /* padding: 0 15px; */
+  height: 40px;
+  line-height: 40px;
+}
+.money{
+  padding: 14px 22px;
+  border-bottom: 1px dotted #D1D1D1; 
+  font-size: 14px;
+}
+.footer{
+  position: relative;
+  height:300px;
+}
+.youhui{
+     border-bottom: 1px solid #f5f5f5;  
+  font-size: 14px;
+  color: #ff0000;
+     /* margin: 0 15px;    */
+  display: inline-block;
+  width: 100%;
+}
+/* 更多尖括号 */
+
+.youhui_con:after {
+width: 5px;
+height: 5px;
+content:'';
+
+border-top:1px solid #999;
+
+border-right:1px solid #999;
+
+transform:rotate(45deg);
+
+-webkit-transform:rotate(45deg);
+
+position:absolute;
+
+top:19px;
+
+right:20px;
+
+
+}
+.sj_youhui{
+  font-size: 12px;
+  color: #D1D1D1;
+  padding: 0 22px;
+  /* display: inline-block; */
+}
+
+/* .footer .coupon{
+  font-size: 22px;
+  display:inline-block;
+  position:absolute;
+top:62%;
+left:32%;
+} */
+.coupon{
+  font-size: 45px;
+  width:100%;
+  /* margin-left: 30%; */
+}
+.zong_cou{
+  text-align: center;
+}
+.pay{
+  background-color: #B78835;
+  color: #fff;
+  width: 92%;
+  /* margin-left: 4%;
+  position:absolute; */
+}
+
+
+/*遮罩层 star  */
+.b1 {
+   position: fixed; 
+    /* position: relative;   */
+   bottom: 0;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 100;
+}
+.t_w{
+  margin-top:300px;
+}
+ .t_ww{
+ position:fixed;
+bottom:0; 
+width:100%; 
+
+} 
+.b2 {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top:112px;
+}
+.b2 .tit{
+  padding: 10px 20px;
+  border-bottom: 1px solid #CECECE;
+  overflow: hidden;
+  text-align: center;
+}
+.t_image {
+  width: 100%;
+  height: 100%;
+  position: fixed; 
+  top: -26%;
+}
+.voucher{
+  padding: 20px;
+  font-size: 14px;
+}
+.down{
+  background-color: #00BC00;
+  color: #fff;
+}
+/*遮罩层 end  */
+/*优惠券  star*/
+.full-cut .coupon .coupon-img{
+  width: 98%;
+  margin-left: 1%;
+  height: 90px;
+  margin-top: 10px;
+}
+.full-cut .coupon .coupon-con{
+  width: 90%;
+  margin-left: 5%;
+  height: 110px;
+  margin-top: -120px;
+  position: relative;
+  z-index: 5;
+  margin-bottom:12px;
+}
+.coupon-con .name{
+ margin-top: 32px;
+ margin-left:15px;
+  z-index: 10;
+  left:70rpx;
+  font-size: 15px;
+  width: 50%;
+  color:#333333;
+  display: inline-block;
+}
+.coupon .full{
+ z-index: 10;
+ margin-left:15px;
+  font-size: 11px;
+  color:#333333;
+}
+.coupon .time{
+  z-index: 10;
+  left:70rpx;
+  margin-top:15px;
+  margin-left: 15px;
+  font-size: 11px;
+  color:#b0b0b0;
+  display: inline-block;
+}
+
+.coupon .cut{
+  margin-top: -32px;
+  position: absolute;
+  right: 15px;
+  color:#ff0000;
+  font-size:60rpx;
+  z-index: 10;
+}
+.coupon .cut .yuan{
+  color:#ff0000;
+  font-size: 13px;
+} 
+.coupon .line{
+  width:96%;
+  position: relative;
+  top:6px;
+  margin-left: 2%;
+  border-top:1px solid #E0E0E0;
+}
+.tt{
+  margin-left: 15px;
+}
+.coupon .receive{
+  width:53px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 13px;
+  background: #ff0000;
+  border-radius:20px;
+  position:absolute;
+  top:84px;
+  right:2%;
+  text-align:center;
+  padding:2px 3px;
+}
+.xiaofei{
+  border-bottom: 1px solid #f5f5f5; 
+}
+.bu_youhui{
+ border-bottom: 1px solid #f5f5f5; 
+}
+.weui-cell:before{
+  border-top:0;
+
+}
+/*优惠券 end  */
+.weui-cell_input {
+padding-top:1px;
+padding-bottom:1px;
+ margin-left: 15px; 
+}
+.youhui_con{
+  margin-left: 15px;
+}
+.sele{
+vertical-align: middle;
+ /* margin-left: 15px;  */
+ display: flex;
+}
+.weui-cell_access{
+  position: relative;
+  background: #fff;
+}
+.peoples{
+  display: inline-block;
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  /* top: 6px; */
+  flex: 1
+}
+
+/*支付方式  */
+.radio{
+    background: #fff;
+    /* margin: 6px 10px; */
+    font-size: 12px;
+    color: #666;
+  }
+  .sex2{
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 5px 0;
+  }
+  .sex3{
+    display: flex;
+     border-bottom: 1px solid #f5f5f5;
+      padding: 5px 0;
+  }
+  .left{
+    flex:0.8;
+    /* text-align: right; */
+    margin-left: 15px;
+  }
+  .left image{
+    width: 30px;
+    height:30px;
+    position:relative;
+top:7px;
+
+  }
+  .zhong{
+    flex: 2;
+    line-height: 25px;
+  }
+  .zhong :nth-child(1){
+    font-size: 14px;
+    color: #000;
+  }
+  .zhong :nth-child(2){
+    font-size: 12px;
+    color: #999;
+  }
+  .Mr{
+   flex: 1; 
+   text-align: right;
+   margin-top:10px;
+margin-right:10px;
+
+  }
+  .lady{
+     flex: 1;
+     text-align: right;
+     margin-top:10px;
+margin-right:10px;
+
+  }
+  /*footer star  */
+ .footer1 {
+  font-size: 12px;
+  color: #999;
+position: fixed;
+bottom: 0;
+text-align: center;
+width: 100%;
+margin-bottom: 10px;
+  } 
+/*footer end  */

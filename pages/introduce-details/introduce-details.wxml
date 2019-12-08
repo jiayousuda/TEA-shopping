@@ -1,0 +1,36 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="con-top" wx:for="{{bann}}">
+    <image src='{{item.image_url}}'></image>
+  </view>
+  <view class="con-tainer">
+    <view class="tain-top public_color">
+      <text class="background_color"></text> <text class="text1 background_color"></text>公司简介<text class="text1 background_color"></text>
+      <text class="background_color"></text>
+    </view>
+    <view class="tainer">
+     <template is="wxParse" data="{{wxParseData:about.nodes}}" />
+    </view>
+     <view class="titlee">
+      <view class="tit1">
+        <text></text>
+        <text>公司名称：{{config.name}}</text>
+      </view>
+      <view class="tit1">
+        <text></text>
+        <text>客服 : {{config.contact_user}}</text>
+      </view>
+      <view class="tit1">
+        <text></text>
+        <text>电话 : {{config.phone}}</text>
+      </view>
+      <view class="tit1">
+        <text></text>
+        <text>地址 :{{config.address}}</text>
+      </view>
+    </view>
+  </view>
+  <!--footer star  -->
+  <view class="footer">众之鑫科技提供技术支持@zzxkeji.cn</view>
+  <!--footer end  -->
+</view>

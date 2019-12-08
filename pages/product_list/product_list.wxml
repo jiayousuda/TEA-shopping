@@ -1,0 +1,47 @@
+<scroll-view scroll-y="true" style="height:{{height}}px;" bindscrolltolower="scrollBottom">
+  <view class="container">
+    <view class="content">
+      <view class="tain-top public_color">
+        <text class="background_color"></text>
+        <text class="iconfont icon-chaye common_img public_color">{{chaye}}</text> {{namee}}
+        <text class="iconfont icon-chaye common_img public_color">{{chaye}}</text>
+        <text class="background_color"></text>
+      </view>
+      <view class="pro_list">
+        <view class="pro-con" wx:for="{{product}}">
+          <view class="" bindtap='deta' data-goid="{{item.id}}">
+            <view class="con-con">
+              <image src='{{item.good_image}}'></image>
+              <view class="pro-font">{{item.goods_name}}</view>
+              <view class="price_buy">
+              <view class="price">￥{{item.sell_price}}</view>
+              <view class="buy_con">
+                <image src='../../images/liji.png'></image>
+                <text>立即购买</text> </view>
+            </view>
+            </view>
+          </view>
+        </view>
+
+        <!-- <view class="pro-con" bindtap='deta' wx:for="{{item.good_list}}" data-goid="{{item.id}}">
+          <view class="con-con">
+            <image src='{{item.good_image}}'></image>
+            <view class="pro-font">{{item.goods_name}}</view>
+            <view class="price_buy">
+              <view class="price">￥{{item.sell_price}}</view>
+              <view class="buy_con">
+                <image src='../../images/liji.png'></image>
+                <text>立即购买</text> </view>
+            </view>
+          </view>
+        </view> -->
+
+
+
+      </view>
+    </view>
+    <view class='nomore' hidden='{{nomore}}'>
+      没有更多啦~
+    </view>
+  </view>
+</scroll-view>

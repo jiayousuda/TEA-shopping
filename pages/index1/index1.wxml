@@ -1,0 +1,160 @@
+<!--index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <!--轮播图 star  -->
+  
+  <view class="swiper-container">
+  <swiper class="swiper-sy" autoplay="{{true}}" style="width:{{imgwidth3}}px; height:{{imgheight3}}px;" indicator-color="#fff" indicator-active-color="#8C5F4D" indicator-dots="{{true}}" current="0">
+    <block wx:key="slider">
+      <swiper-item wx:for="{{movies}}">
+        <navigator url="{{item.linkurl}}" open-type="{{item.open_type}}">
+          <image src="{{item.image_url}}" bindload="imageLoad3" style="width:{{imgwidth3}}px; height:{{imgheight3}}px;" class="slider-img"></image>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <!--轮播图 end  -->
+
+
+  <!-- 大分类 star -->
+  <view class="Bigclass">
+    <view class="Bigclass_con">
+      <view class="bclass" bindtap='intro'>
+        <image src='../../images/index_03.png' bindload="imageLoad1" style="width:{{imgwidth1}}rpx; height:{{imgheight1}}rpx;"></image>
+        <view>八马简介</view>
+      </view>
+      <view class="bclass" bindtap='product'>
+        <image src='../../images/index_05.png' bindload="imageLoad1" style="width:{{imgwidth1}}rpx; height:{{imgheight1 }}rpx;"></image>
+        <view>茶叶商城</view>
+      </view>
+      <view class="bclass" bindtap='dynamic'>
+        <image src='../../images/index_07.png' bindload="imageLoad1" style="width:{{imgwidth1}}rpx; height:{{imgheight1 }}rpx;"></image>
+        <view>最新活动</view>
+      </view>
+      <view class="bclass" bindtap='joinIn'>
+        <image src='../../images/index_09.png' bindload="imageLoad1" style="width:{{imgwidth1}}rpx; height:{{imgheight1 }}rpx;"></image>
+        <view>招商加盟</view>
+      </view>
+    </view>
+  </view>
+  <!-- 大分类 end -->
+  <!--产品分类 star  -->
+  <view class="ProdCategs">
+    <view class="Prod_con" >
+      <view class="imm_con" wx:for="{{category_list}}" bindtap='ProdCategs' data-id="{{item.arrchildid}}" data-name="{{item.cnname}}">
+        <image src='{{item.image}}' bindload="imageLoad" style="width:100%; height:{{imgheight }}rpx;"></image>
+      </view>
+    
+    </view>
+  </view>
+  <!--contant_back  -->
+
+<!--优惠券 star  -->
+  <view class="coupons" hidden="{{hasNoCoupons}}">
+    <scroll-view class="coupons-scroll" scroll-x="true">
+      <view class="coupons-item" wx:for-items="{{coupons}}" wx:for-index="idx" wx:key="id" bindtap="gitCoupon" data-id="{{item.id}}">
+      <image src='../../images/coupon2.png'></image>
+      <view class="copn_con">
+       <view style="font-size: 13px"> ￥ {{item.fee}}元 </view>
+        <view> {{item.title}} </view>
+        <view> 满 {{item.condition}} 元使用 </view>
+        <view wx:if="{{item.dateEndType == 0}}"> {{item.end_time}} 前有效 </view>
+        <view wx:if="{{item.dateEndType == 1}}"> 领取5 天内有效 </view>
+      </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!--优惠券 end-->
+
+
+
+
+  <view class="contant_back">
+    <!--热卖产品 star  -->
+    <view>
+      <image class="tit_hot" src='../../images/index_40.png' bindload="imageLoad2" style="width:{{imgwidth2}}px; height:{{imgheight2}}rpx;"></image>
+      <view class="product_con">
+        <view class="pro-con" bindtap='deta' wx:for="{{remai}}" data-goid="{{item.id}}">
+          <view class="con-con">
+            <image src='{{item.good_image}}' ></image>
+            <view class="pro-font">{{item.goods_name}}</view>
+            <view class="price_buy">
+              <view class="price">￥{{item.sell_price}}</view>
+              <view class="buy_con">
+                 <image src='../../images/liji.png'></image>    
+                <text>立即购买</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--热卖产品 end  -->
+    <!--新品推荐 star  -->
+    <view>
+      <image class="tit_hot" src='../../images/index_42.png' bindload="imageLoad2" style="width:{{imgwidth2}}px; height:{{imgheight2}}rpx;"></image>
+      <view class="product_con">
+        <view class="pro-con" bindtap='deta' wx:for="{{xinpin}}" data-goid="{{item.id}}">
+          <view class="con-con">
+            <image src='{{item.good_image}}'></image>
+            <view class="pro-font">{{item.goods_name}}</view>
+            <view class="price_buy">
+              <view class="price">￥{{item.sell_price}}</view>
+              <view class="buy_con">
+                <image src='../../images/liji.png'></image>
+                <text>立即购买</text> </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--新品推荐 end  -->
+    <!--视频 star  -->
+    <view>
+      <view class="container">
+        <video src="{{video}}"></video>
+      </view>
+    </view>
+    <!--视频 end  -->
+    <!--品牌故事 star  -->
+    <view class="story">
+      <image class="tit_hot" src='../../images/pinpai.jpg' bindload="imageLoad2" style="width:{{imgwidth2}}px; height:{{imgheight2}}rpx;"></image>
+      <view class="pp_story">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+
+    </view>
+
+    <!--品牌故事 end  -->
+    <!--联系我们 star  -->
+    <view class="contact_us">
+      <image class="tit_hot" src='../../images/index_44.png' bindload="imageLoad2" style="width:{{imgwidth2}}px; height:{{imgheight2}}rpx;"></image>
+    </view>
+    <view class="introduce-con">
+      <view class="contact-con">
+        <view class="conta" bindtap='map' data-long="{{config.longitude}}" data-lat="{{config.latitude}}">
+          <image src='../../images/index_47.png'></image>
+          <view class="conta_tit">我们在这</view>
+          <view class="address_font">{{config.address}}</view>
+        </view>
+        <view class="conta" bindtap='phone'>
+          <image src='../../images/index_49.png'></image>
+          <view class="conta_tit">联系电话</view>
+          <view>{{config.phone}}</view>
+        </view>
+        <view class="conta" session-from="weapp">
+          <image src='../../images/index_51.png'></image>
+          <view class="conta_tit">联系客服</view>
+          <view class="address_con">{{config.contact_user}}</view>
+        </view> 
+      </view>
+      <view class="detail_address" bindtap='controltap'>详细地址：{{config.address}}</view>
+    </view>
+    <!--联系我们  end -->
+    <!--footer star  -->
+    <view class="footer" bindtap='phone1'>众之鑫科技提供技术支持@zzxkeji.cn</view>
+    <!--footer end  -->
+  </view>
+  <!--contant_back -->
+</view>

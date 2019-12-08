@@ -1,0 +1,19 @@
+<view class="container">
+<view class="partic" bindtap="partic">不使用优惠券</view>
+  <!--优惠券 star  -->
+        <view class="full-cut">
+          <view class="coupon" wx:for="{{coupons}}" wx:key="id" wx:for-item="i">
+            <image class="coupon-img" src="../../images/coupon.png" />
+            <view class="coupon-con">
+              <view class="name">{{i.coupon_name}}</view>
+              <view class="full">满{{i.condition}}可用</view>
+              <view class="cut">
+                <text class="yuan">¥</text>{{i.fee}}</view>
+              <view class="line"></view>
+              <view class="time">有效期：{{i.start_time}}—{{i.end_time}}</view>
+              <view class="receive" bindtap="tapUse" data-id="{{i.id}}" data-index="{{index}}">点击使用</view>
+            </view>
+          </view>
+        </view>
+        <!--优惠券  -->
+</view>

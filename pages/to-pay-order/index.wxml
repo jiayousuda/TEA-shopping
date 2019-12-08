@@ -1,0 +1,163 @@
+<import src="../template/pwdInput.wxml" />
+<template is="pwdInput" data="{{passWord,passWordArr,isshowpwd,goodlist_fee}}"></template>
+<template is="pwdInput1" data="{{newpassWord,passWordArr,isshowpwd1}}"></template>
+<view class="container">
+  <form bindsubmit="createOrder" report-submit="true">
+    <!--地址 star  -->
+    <view class="address-box" wx:if="{{isNeedLogistics > 0}}">
+      <view class="add-address" hidden="{{curAddressData}}">
+        <view class="title" bindtap="addAddress">新增收货地址</view>
+      </view>
+      <view class="show-address" hidden="{{!curAddressData}}" bindtap="selectAddress">
+        <view class="name-tel">{{curAddressData.name}} {{curAddressData.phone}}</view>
+        <view class="addr-text">{{curAddressData.address}}</view>
+      </view>
+    </view>
+    <!--地址 end -->
+
+    <!--商品list  -->
+    <!--购物车  -->
+    <view class="goods-list" hidden="{{listt}}">
+      <view class="list-title">商品列表</view>
+      <view class="a-goods" wx:for-items="{{goodsList}}" wx:key="{{index}}">
+        <view class="img-box">
+          <image src="{{item.good_image}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="arow arow01">
+            <view class="goods-name">{{item.goods_name}}</view>
+            <view class="goods-price">¥ {{item.sell_price}}</view>
+          </view>
+          <view class="arow">
+            <view class="goods-label">{{item.label}}</view>
+            <view class="goods-num">x {{item.total_num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="goods-list" hidden="{{!listt}}">
+      <view class="list-title">商品列表</view>
+      <view class="a-goods">
+        <view class="img-box">
+          <image src="{{goodsLists.good_image}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="arow arow01">
+            <view class="goods-name">{{goodsLists.goods_name}}</view>
+            <view class="goods-price">¥ {{goodsLists.sell_price}}</view>
+          </view>
+          <view class="arow">
+            <view class="sku">{{sku_info.attr_str_value}}</view>
+            <view class="goods-label">{{goodsLists.label}}</view>
+            <view class="goods-num">x {{goodlist.total_num}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--商品list  -->
+    <!--选择店铺/配送方式 /备注 -->
+
+    <view class="peisong-way">
+      <!--选  -->
+      <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{shops}}">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">选择店铺
+            <view class="peoples">{{shop}}</view>
+          </view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view> 
+      </view>
+    </picker>
+      <!--选  -->
+      <!--配  -->
+      <picker mode="selector" bindchange="bindPickerChange1" value="{{index}}" range="{{peis}}">
+      <view class="weui-cell weui-cell_access">
+        <view class="weui-cell__bd">
+          <view style="display: inline-block; vertical-align: middle">配送方式
+            <view class="peoples">{{pei}}</view>
+          </view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </view>
+    </picker>
+      <!--配  -->
+      <!--备  -->
+      <view class="row-box">
+        <view class="row-label">备注</view>
+        <view class="right-text">
+          <input name="remark" value="{{remark}}" type="text" class="liuyan" placeholder="如需备注请输入" />
+        </view>
+      </view>
+      <!--备  -->
+    </view>
+    <!--选择店铺/配送方式 /备注  -->
+
+    <!--优惠券 star-->
+    <view class="peisong-way">
+      <view class="row-box con-box" style="border-bottom:none;" bindtap='couponTap'>
+        <view class="row-label con_tit">选择使用优惠券</view>
+        <view class='con_pon'>
+          <view class="right-text" hidden="{{!cancou}}">- ¥ {{goodlist.discount_fee}}</view>
+          <view class="cancou" hidden="{{cancou}}">{{nonecou}}</view>
+        </view>
+      </view>
+    </view>
+<!--支付方式  -->
+ <!-- <view class="radio">
+      <radio-group name="paytype">
+        <label class="contact"> 支付方式：</label>
+        <label class="sex2">
+          <radio class="Mr" name="boy" value="微信"/>微信支付
+       </label>
+        <label class="sex3">
+          <radio class="lady" name="girl" value="支付"/>余额支付
+        </label>
+      </radio-group>
+    </view> -->
+<!--支付方式  -->
+<!--支付方式  -->
+          <view class="radio">
+            <radio-group name="paytype" bindchange="radioChange">
+              <label class="sex2">
+              <view class="left">
+              <image src='../../images/wx.png'></image>
+              </view>
+                <view class="zhong">
+                  <view>微信支付</view>
+                  <view>快捷支付</view>
+                </view>
+                <radio class="Mr" name="boy" value="微信" />
+              </label>
+              <label class="sex3">
+              <view class="left">
+              <image src='../../images/ye.png'></image>
+              </view>
+                <view class="zhong">
+                  <view>余额支付</view>
+                  <view>￥{{y_money}}</view>
+                </view>
+                <radio class="lady" name="girl" value="支付" />
+              </label>
+            </radio-group>
+          </view>
+          <!--支付方式  -->
+    <!--展示金额 star  -->
+    <view class="goods-info">
+      <view class="row-box" wx:if="{{isNeedLogistics > 0 && yunPrice > 0}}">
+        <view class="row-label">商品金额</view>
+        <view class="right-text">¥ {{allGoodsPrice}}</view>
+      </view>
+    </view>
+    <!--展示金额 end-->
+
+    <!--提交 star  -->
+    <view class="jiesuan-box">
+      <view class="left-price">
+        <view class="total">合计：¥ {{goodlist.total_fee}}</view>
+      </view>
+      <button class="to-pay-btn" formType="submit">提交订单</button>
+    </view>
+    <!--提交  end-->
+  </form>
+</view>

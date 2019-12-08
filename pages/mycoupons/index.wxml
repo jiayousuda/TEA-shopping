@@ -1,0 +1,25 @@
+<view class="container">
+   <view class="couList" wx:for="{{coupons}}" >
+    <view class="contant" >
+      <image src='../../images/coupon.png'>
+      </image>
+      <view class="list_con">
+        <view class="cou_name">
+          <view class="cou_name_nth1">
+          <view>{{item.coupon_name}}</view>
+            <view class="manjian">满{{item.condition}}元可用</view>
+           
+            <view class="cou_time">(使用时间：{{item.start_time}}-{{item.end_time}})</view>
+          </view>
+          <view class="con-money">
+            <text class="cou_mon"> ￥ </text>
+            <text class="cou_name_nth2">{{item.fee}}</text>
+            
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+   
+
+</view>

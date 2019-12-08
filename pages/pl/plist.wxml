@@ -1,0 +1,24 @@
+<scroll-view  scroll-y="true" style="height:{{height}}px;background:#fff;" bindscrolltolower="scrollBottom">
+  <view class='font-normal font-color-deep title'>{{name}}店面分布</view>
+  
+    <view class='plist'>
+      <ul>
+        <li  wx:for="{{list}}" >
+          <view class='item'>
+            <image src='{{item.thumb}}' class='img'></image>
+            <view class='text'>
+              <view class='font-normal font-color-normal' data-id="{{item.id}}" data-name="{{item.name}}" bindtap="toxq">
+                {{item.name}}
+                <text class='xq'>详情</text>
+              </view>
+              <view class='font-small font-color-666' catchtap='callphone' data-num="{{item.phone}}">电话：{{item.phone}}</view>
+              <view class='font-small font-color-666 adr' data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" bindtap='controltap'>位置：{{item.address}}</view>
+            </view>
+          </view>
+        </li>
+      </ul>
+    </view>
+    <view class='nomore' hidden='{{nomore}}'>
+      没有更多啦~
+    </view>
+  </scroll-view>

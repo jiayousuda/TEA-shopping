@@ -1,0 +1,44 @@
+<template name="pwdInput">
+  <view class='pop' wx:if="{{isshowpwd}}">
+    <view class='dialog' style='height:180px;'>
+      <view class='pop-title'>请输入支付密码</view>
+      <view class='jg'>￥{{goodlist_fee}}</view>
+      <view class="pwdInputStyle">
+          <view class="pas"> 
+          <input class="pas_input" type="number" maxlength="6" focus="true" bindinput="onChangeInput" />
+          </view>   
+               <!-- <input class="pas_input"  type="number"  maxlength="6" focus="true" bindinput="onChangeInput" />   
+         -->
+
+        <block wx:for="{{[0,1,2,3,4,5]}}">
+          <view class="itemStyle flex_Center">
+            <view wx:if="{{passWordArr[item] == true}}" class="PwdStyle"></view>
+          </view>
+        </block>
+      </view>
+      <view class='btn'>
+        <view class='btn-left' bindtap='cancel'>取消</view>
+        <view class='btn-right' bindtap="onTapCommit">确定</view>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="pwdInput1">
+  <view class='pop' wx:if="{{isshowpwd1}}">
+    <view class='dialog' style='height:180px;'>
+      <view class='pop-title'>设置支付密码</view>
+      <view class="pwdInputStyle">
+        <input class="pas_input" type="number" maxlength="6" focus="true" bindinput="onChangeInput1" />
+        <block wx:for="{{[0,1,2,3,4,5]}}">
+          <view class="itemStyle flex_Center">
+            <view wx:if="{{passWordArr[item] == true}}" class="PwdStyle"></view>
+          </view>
+        </block>
+      </view>
+      <view class='btn'>
+        <view class='btn-left' bindtap='cancel1'>取消</view>
+        <view class='btn-right' bindtap="onTapCommit1">确定</view>
+      </view>
+    </view>
+  </view>
+</template>

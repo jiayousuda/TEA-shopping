@@ -1,0 +1,9 @@
+<view class="container">
+<!--  -->
+  <view class="con_list" >
+      <view class="con_li"  wx:for="{{categories}}" data-id="{{item.id}}" bindtap='bindlist'>
+        <image src='{{item.image}}'></image>
+        <view> {{item.cnname}}</view> 
+      </view>
+  </view>
+</view>

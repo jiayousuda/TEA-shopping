@@ -1,0 +1,68 @@
+.title {
+  font-size: 14px;
+  text-align: center;
+  /* background: #f5f5f5; */
+  line-height: 40px;
+  margin-bottom: 10px;
+  color: #666;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.plist ul {
+  display: block;
+}
+
+.plist ul li {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  height: 100px;
+}
+
+.plist .item {
+  display: flex;
+}
+
+.plist .item .img {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  border-radius: 8px;
+}
+
+.plist .item .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.plist .item .text view {
+  flex: 1;
+  /* padding: 4px 0; */
+}
+.plist .item .text .adr{
+line-height:13px;
+display:block;
+}
+
+.plist .item .text .xq {
+  float: right;
+  font-size: 11px;
+  color: #666;
+  background: #ffdb43;
+  padding: 4px 12px;
+  border-radius:38px;
+}
+/*上拉加载  */
+.nomore{
+  font-size:12px;
+background:#f1f1f1;
+color:#999;
+line-height:25px;
+text-align:center;
+padding:4px 0;
+clear: both;
+}

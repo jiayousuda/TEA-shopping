@@ -1,0 +1,19 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="con">
+    <view class="con_title">
+      <view>{{info.title}}</view>
+      <view>{{info.time_str}}</view>
+    </view>
+    <view class="con-contain">
+      <view class="con-font">
+        <view class="tainer">
+          <template is="wxParse" data="{{wxParseData:about.nodes}}" />
+       </view>
+      </view>
+    </view>
+  </view>
+   <!--footer star  -->
+  <view class="footer" bindtap='phone1'>众之鑫科技提供技术支持@zzxkeji.cn</view>
+  <!--footer end  -->
+</view>

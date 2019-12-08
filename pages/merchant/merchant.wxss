@@ -1,0 +1,15 @@
+.template{
+  font-size: 12px;
+  color: #666;
+  padding:0 5px ;
+  line-height: 24px;
+  text-indent: 2em;
+}
+.titit{
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #333;
+}
+
+

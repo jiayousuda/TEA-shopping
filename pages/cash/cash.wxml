@@ -1,0 +1,16 @@
+ <scroll-view scroll-y style="height:{{height}}px;" bindscrolltolower="scrollBottom"  >
+        <view class="his_list">
+          <view class="his_li" wx:for="{{recharge}}">
+            <view class="li_left">
+              <view class="his_money">-{{item.total_fee}}</view>
+              <view class="chongzhi">{{item.system_order_no}}</view>
+            </view>
+            <view class="li_right">
+              <view class="his_time">{{item.time_str}}</view>
+            </view>
+          </view>
+        </view>
+        <view hidden='{{nomore}}' class='nomore'>
+  没有更多啦~
+  </view>
+</scroll-view>

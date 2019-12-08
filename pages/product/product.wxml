@@ -1,0 +1,48 @@
+<view class="container">
+  <!--轮播图 star  -->
+  <view class="recommend">
+    <view class="swiper-container">
+      <swiper style="{{width}}" autoplay="true" interval="5000" class="swiper" style="width:{{imgwidth3}}px; height:{{imgheight3}}px;">
+        <block wx:for="{{movies}}" wx:key="unique">
+          <swiper-item>
+            <image class="swiperimg" src="{{item.image_url}}" bindload="imageLoad3" style="width:{{imgwidth3}}px; height:{{imgheight3}}px;"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!--轮播图 end  -->
+  <view class="content">
+    <view class="tain-top public_color">
+      <text class="background_color"></text>
+      <text class="text1 background_color"></text> 产品展示
+      <text class="text1 background_color"></text>
+      <text class="background_color"></text>
+    </view>
+    <!--  -->
+    <view wx:for="{{product}}">
+      <view class="nav-tit" hidden="{{item.good_list==''}}">
+        <text class="iconfont icon-chaye common_img public_color">{{chaye}}</text>
+        <view class="tit public_color">{{item.cnname}}</view>
+        <view class="deta public_color" bindtap='proList' data-id="{{item.id}}" data-name="{{item.cnname}}">更多 </view>
+      </view>
+      <view class="product_con" >
+        <view class="pro-con" bindtap='deta' wx:for="{{item.good_list}}" data-goid="{{item.id}}">
+          <view class="con-con">
+            <image src='{{item.good_image}}'></image>
+            <view class="pro-font">{{item.goods_name}}</view>
+            <view class="price_buy">
+              <view class="price">￥{{item.sell_price}}</view>
+              <view class="buy_con">
+                <image src='../../images/liji.png'></image>
+                <text>立即购买</text> </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--footer star  -->
+  <view class="footer" bindtap='phone1'>众之鑫科技提供技术支持@zzxkeji.cn</view>
+  <!--footer end  -->
+</view>

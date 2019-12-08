@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="tainer">
+    <view class="history">
+      <view class="his_tit">
+        <view class="tit_left">充值明细</view>
+      </view>
+      <scroll-view scroll-y style="height: 200px;" bindscrolltolower="scrollBottom"  >
+        <view class="his_list">
+          <view class="his_li" wx:for="{{recharge}}">
+            <view class="li_left">
+              <view class="his_money">{{item.fee}}</view>
+            </view>
+            <view class="li_right">
+              <view class="his_time">{{item.time_str}}</view>
+            </view>
+          </view>
+        </view>
+        <view hidden='{{nomore}}' class='nomore'>
+  没有更多啦~
+  </view>
+</scroll-view>
+
+    </view>
+  </view>
+  <!--con end  -->
+</view>

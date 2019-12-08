@@ -1,0 +1,32 @@
+/**index.wxss**/
+@import "../template-cart/template-cart.wxss";
+page{
+  min-height: 100%;
+  background-color: #fff;
+}
+.container {
+  background-color: #F2f2f2;
+  min-height: 100%;
+}
+.pos-fiexd{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.buy-num button{
+ line-height:1;
+ padding-right:0px;
+ padding-left:0px;
+border: 1px solid #ccc !important;
+border-right: 0 !important;
+border-radius: 0 !important;
+padding: 0 5px;
+margin: 0;
+background: #fff;
+
+}
+button::after{
+  width: 0;
+  height: 0;
+
+}

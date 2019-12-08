@@ -1,0 +1,58 @@
+<import src="../template/pwdInput.wxml" />
+<template is="pwdInput" data="{{passWord,passWordArr,isshowpwd,goodlist_fee}}"></template>
+<template is="pwdInput1" data="{{newpassWord,passWordArr,isshowpwd1}}"></template>
+<view class="container">
+  <form bindsubmit="createOrder" report-submit="true">
+    <!--地址 star  -->
+    <view class="address-box" wx:if="{{isNeedLogistics > 0}}">
+      <view class="add-address" hidden="{{curAddressData}}">
+        <view class="title" bindtap="addAddress">新增收货地址</view>
+      </view>
+      <view class="show-address" hidden="{{!curAddressData}}" bindtap="selectAddress">
+        <view class="name-tel">{{curAddressData.name}} {{curAddressData.phone}}</view>
+        <view class="addr-text">{{curAddressData.address}}</view>
+      </view>
+    </view>
+    <!--地址 end -->
+
+    <!--商品list  -->
+    <!--购物车  -->
+    <view class="goods-list" >
+      <view class="list-title">商品列表</view>
+      <view class="a-goods" >
+        <view class="img-box">
+          <image src="{{image}}" class="img" />
+        </view>
+        <view class="text-box">
+          <view class="arow arow01">
+            <view class="goods-name">{{name}}</view>
+            <view class="goods-price">¥ {{price}}</view>
+          </view>
+          <view class="arow">
+            <view class="goods-label">{{item.label}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+   
+    <!--商品list  -->
+    
+    <!--展示金额 star  -->
+    <view class="goods-info">
+      <view class="row-box" wx:if="{{isNeedLogistics > 0 && yunPrice > 0}}">
+        <view class="row-label">商品金额</view>
+        <view class="right-text">¥ {{price}}</view>
+      </view>
+    </view>
+    <!--展示金额 end-->
+
+    <!--提交 star  -->
+    <view class="jiesuan-box">
+      <view class="left-price">
+        <view class="total">合计：¥ {{price}}</view>
+      </view>
+      <button class="to-pay-btn" formType="submit">兑换</button>
+    </view>
+    <!--提交  end-->
+  </form>
+</view>

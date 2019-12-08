@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/index1/index1",
+    "pages/jifen_to_pay/jifen_to_pay",
+    "pages/usecoupon2/usecoupon2",
+    "pages/integral/integral",
+    "pages/cash/cash",
+    "pages/c_money1/c_money1",
+    "pages/goods-details/index",
+    "pages/shop-cart/index",
+    "pages/to-pay-order/index",
+    "pages/select-address/index",
+    "pages/address-add/index",
+    "pages/order-list/index",
+    "pages/order-details/index",
+    "pages/category/category",
+    "pages/mycoupons/index",
+    "pages/my/index",
+    "pages/edit_address/edit_address",
+    "pages/product/product",
+    "pages/product_list/product_list",
+    "pages/dynamic-details/dynamic-details",
+    "pages/news/news",
+    "pages/introduce-details/introduce-details",
+    "pages/vouches/vouches",
+    "pages/pl/pl",
+    "pages/pl/plist",
+    "pages/pl/plxq",
+    "pages/merchant/merchant",
+    "pages/pay/pay",
+    "pages/inte_shop/inte_shop",
+    "pages/inte_list/inte_list",
+    "pages/ymoney/ymoney",
+    "pages/guize/guize",
+    "pages/logistic/logistic"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#B28232",
+    "navigationBarTitleText": "八马茶业",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#B28232",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 6px 0",
+    "list": [
+      {
+        "pagePath": "pages/index1/index1",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "iconPath": "images/nav/ification-off.png",
+        "selectedIconPath": "images/nav/ification-on.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/pay/pay",
+        "iconPath": "images/nav/cart-off.png",
+        "selectedIconPath": "images/nav/cart-on.png",
+        "text": "付款"
+      },
+      {
+        "pagePath": "pages/pl/pl",
+        "iconPath": "images/nav/order-off.png",
+        "selectedIconPath": "images/nav/order-on.png",
+        "text": "门店"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

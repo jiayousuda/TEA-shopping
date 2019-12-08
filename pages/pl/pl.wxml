@@ -1,0 +1,15 @@
+<view class='dm-fenbu'>
+  <image src='http://zxxwl.img-cn-beijing.aliyuncs.com/bamatea/2017-12-22/QHpJteY6t5QSH2rABJG7BrdYDZmY84md.jpg' bindload="imageLoad2"  
+style="width:{{imgwidth2}}px; height:{{imgheight2}}rpx;"></image>
+  <view class='font-normal font-color-normal title'>西北店面分布</view>
+  <view class='fb-list'>
+    <ul>
+      <li bindtap="tolist" wx:for="{{info}}" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</li>
+     
+    </ul> 
+  </view>
+  
+</view>
+ <!--footer star  -->
+    <view class="footer1" bindtap='phone1'>众之鑫科技提供技术支持@zzxkeji.cn</view>
+    <!--footer end  -->

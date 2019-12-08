@@ -1,0 +1,11 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<!--文  -->
+<view class="titit">{{jiameng.title}}</view>
+<view class="template">
+<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+
+<!-- 文 -->
+
+   

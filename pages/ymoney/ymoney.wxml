@@ -1,0 +1,60 @@
+<view class="yue_show">
+      <view class="y_money">{{money}}</view>
+      <view class="y_tit"> 账户余额（元）</view>
+    </view>
+
+ <!-- <view class='top'> 
+
+   <view class='iconfont icon-yue font-normal font-color-666 left'> 我的余额（元）</view> 
+  <view class='font-big font-color-normal right'>{{money}}</view> 
+ </view>  -->
+<view class='ob-row' bindtap='editpwd'>
+  <view class='font-color-333 font-normal title'>
+    设置支付密码
+  </view>
+  <view class='right-jt font-normal font-color-666'>
+    <text class="iconfont icon-jiantou1" style='font-size:12px;float:right;line-height:36px;'></text>
+  </view>
+</view>
+<view class='pop' wx:if="{{showeditdialog}}">
+    <view class='dialog' style='height:147px;'>
+      <view class='info-dialog'>
+        <form bindsubmit="formSubmit" bindreset="formReset">
+          <view class='font-big font-color-normal title'>支付密码</view>
+          <view class='info-input'>
+            <view class='font-normal font-color-666 input-left'>密码</view>
+            <input name="pwd" placeholder='请输入您的支付密码'></input>
+          </view>
+          <view class='btn'>
+            <button class='left-c' formType="reset">取消</button>
+            <button class='right-tj' formType="submit">确定</button>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+<view class='flex-wrap'>
+  <view class='flex-item font-small font-color-shallow text-right' bindtap='tolist1' data-id="0">充值记录</view>
+  <view class='flex-center font-small font-color-shallow'>|</view>
+  <view class='flex-item font-small font-color-shallow' bindtap='tolist' data-id="1">消费记录</view>
+</view>
+<view class='content' style='height:{{height}}px'>
+  <view class='yhq-list'>
+    <ul>
+      <li wx:for="{{list}}">
+        <view class='yhq-item'>
+          <view class='flex-left'>
+            <view class='font-normal'>
+              <text class='font-big money'>{{item.fee}}</text>充值卡
+            </view>
+            <view class='song'>充{{item.fee}}送{{item.send_fee}}</view>
+            <view class='font-small time'>充值享优惠</view>
+          </view>
+          <view class='flex-right'>
+            <view class='lq' bindtap='chongz' data-id="{{item.id}}">立即充值</view>
+          </view>
+        </view>
+      </li>
+    </ul>
+  </view>
+</view>

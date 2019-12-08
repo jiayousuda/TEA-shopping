@@ -1,0 +1,93 @@
+<import src="../template/pwdInput.wxml" />
+<template is="pwdInput" data="{{passWord,passWordArr,isshowpwd,goodlist_fee}}"></template>
+<template is="pwdInput1" data="{{newpassWord,passWordArr,isshowpwd1}}"></template>
+
+<view class="container"> 
+<form bindsubmit="bindSave"  report-submit="true"> 
+  <!--轮播图 star  -->
+  <view class="tainer">
+    <!--轮播图 end  -->
+    <!--con star  -->
+    <view>
+      <view class="tit">
+        <view class="shohome">
+          收款商户：
+        </view>
+        <view class="homename">
+          {{shop_name}}
+        </view>
+      </view>
+      <!--选  -->
+      <view class="tt">
+        <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{shops}}">
+          <view class="weui-cell weui-cell_access arrowUp">
+            <view class="weui-cell__bd">
+              <view class="sele" style="">
+                <view class="shohome">
+                  选择门店：
+                </view>
+                <view class="peoples homename">{{shop}}</view>
+              </view>
+            </view>
+          </view>
+        </picker>
+      </view>
+
+      <!--选  -->
+      <view class="con">
+        <view class="weui-cell weui-cell_input xiaofei">
+          <view class="weui-cell__hd htit">
+            <view class="weui-label">消费总额：</view>
+          </view>
+          <view class="weui-cell__bd ">
+            <input name="amount2" class="weui-input" type='digit' placeholder="请输入消费总额" bindinput="amount2" value="{{amount2}}" />
+          </view>
+        </view>
+        <view class="footer">
+          <view class="youhui_con">
+          <!--hidden="{{amount==false}}"  -->
+            <view class="youhui" bindtap="coupon" >点击使用优惠券</view>
+          </view>
+          <!--支付方式  -->
+          <view class="radio">
+            <radio-group name="paytype" bindchange="radioChange">
+              <label class="sex2">
+              <view class="left">
+              <image src='../../images/wx.png'></image>
+              </view>
+                <view class="zhong">
+                  <view>微信支付</view>
+                  <view>快捷支付</view>
+                </view>
+                <radio class="Mr" name="boy"  value="微信" />
+              </label>
+              <label class="sex3">
+              <view class="left">
+              <image src='../../images/ye.png'></image>
+              </view>
+                <view class="zhong">
+                  <view>余额支付</view>
+                  <view>￥{{y_money}}</view>
+                </view>
+                <radio class="lady" name="girl" value="支付" />
+              </label>
+            </radio-group>
+          </view>
+          <!--支付方式  -->
+
+          <view class="sj_youhui" bindtap="coupon" hidden="{{amount==true}}">商家优惠金额 ￥{{prefer}}</view>
+          <view class="zong_cou">
+            <text class="coupon_e">￥</text>
+            <text class="coupon"> {{goodlist_fee}}</text>
+          </view>
+          <button class="pay" bindtap="pay" formType="submit">确认支付 </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--con end  -->
+  <!--footer star  -->
+  <view class="footer1" bindtap='phone1'>众之鑫科技提供技术支持@zzxkeji.cn</view>
+  <!--footer end  -->
+   </form>
+</view>
